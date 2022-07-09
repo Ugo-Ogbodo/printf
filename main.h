@@ -1,7 +1,6 @@
 #ifndef _MAIN_H
 #define _MAIN_H
 
-#define NON "\%"
 #include <stdio.h>
 
 int _str_len(char *str);
