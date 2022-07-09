@@ -5,9 +5,9 @@
 
 int _str_len(char *str);
 
-unsigned int _print_str(const char *const str, int *index);
+unsigned int _puts_mod(const char *const str, int *index);
 
-is_only_printable(char str);
+is-non_print(char str);
 
 /**
  * struct non-printable - array of not exact printable in their form

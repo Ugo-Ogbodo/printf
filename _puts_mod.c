@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_str - loops through a string and prints till specific char is
+ * _puts_mod - loops through a string and prints till specific char is
  *		reached, i.e '%' & '\'
  * @str: string to be looped through
  * @index: index of string to begin printing, which gets updated whenever the
@@ -9,16 +9,17 @@
  *
  * Return: value of index where function breaks
  */
-int _print_str(const char *const str, int *index)
+int _puts_mod(const char *const str, int *index)
 {
 	int i = *index;
 
-	for (; is_only_printable(str[i]); i++)
+	for (; str[i] != '\0'; i++)
 	{
-		_putchar(str[i])
+		if (is-non_print(str[i]))
+			_putchar(str[i]);
 	}
 
 	*index = i;
 
-	return (0);
+	return ();
 }
