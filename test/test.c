@@ -1,12 +1,7 @@
-#include "main.h"
+#include "_main.h"
 
 int main(void)
 {
-	int i;
-	char *
-
-	for (i = 0; NON[i] != '\0'; i++)
-		_putchar(NON[i]);
-
+	printf("%s\n", data_type_specs[1].symbol);
 	return (0);
 }
