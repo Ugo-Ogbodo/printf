@@ -7,7 +7,7 @@
  * Description: calculates the just length of given string
  * Return: length as unsigned int
  */
-int _strlen(char *str)
+int _strlen(const char *str)
 {
 	int len = 0;
 

@@ -8,11 +8,11 @@
  *
  * Return: Given format as one char
  */
-char *store_format(char *spec, char *str, int *index)
+char *store_format(char *spec, const char *str, int *index)
 {
 	int i = *index;
 
-	for (j = 0; !(is_symbol(str[j])); i++, j++)
+	for (j = 0; !(is_symbol(str[i])); i++, j++)
 		spec[j] = str[i];
 
 	spec[j] = str[i];

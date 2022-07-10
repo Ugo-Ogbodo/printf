@@ -12,7 +12,11 @@ int _printf(const char *format, ...)
 	char *spec;
 	va_list args;
 
-	va_start(args, forrmat);
+	spec = malloc(_strlen(format) * sizeof(int));
+	if (spec == NULL)
+		return (0);
+
+	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (is_non_printable(format[i]))
@@ -21,9 +25,10 @@ int _printf(const char *format, ...)
 			format_func(spec, args);
 		}
 
-		_putchar(str[i]);
+		_putchar(format[i]);
 	}
-	va_end(arg);
+	va_end(args);
+	free(spec);
 
 	return (i);
 }

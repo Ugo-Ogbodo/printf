@@ -14,10 +14,9 @@
  */
 void format_func(char *spec, va_list args)
 {
-	int i, j = 0;
 	char *symbol;
 
-	if (spec[0] == '%' || spec[0] == '\')
+	if (spec[0] == '%' || spec[0] == \\)
 	{
 		assign_data_type(symbol, spec);
 		scan_dt_specs(symbol, args);
