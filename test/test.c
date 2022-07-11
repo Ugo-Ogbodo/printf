@@ -2,6 +2,7 @@
 
 int main(void)
 {
-	printf("%s\n", data_type_specs[1].symbol);
+	char *s = "\\%";
+	printf("%d\n", _strlen(s));
 	return (0);
 }

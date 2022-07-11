@@ -13,7 +13,7 @@ int is_non_printable(char str)
 {
 	int i;
 
-	char *non_print = "\%";
+	char *non_print = "\\%";
 
 	for (i = 0; non_print[i] != '\0'; i++)
 	{

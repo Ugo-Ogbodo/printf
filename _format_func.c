@@ -15,10 +15,14 @@
 void format_func(char *spec, va_list args)
 {
 	char *symbol;
+	symbol = malloc(sizeof(char) * _strlen(spec));
+	if (symbol == NULL)
+		return;
 
-	if (spec[0] == '%' || spec[0] == \\)
+	if (spec[0] == '%' || spec[0] == 92)
 	{
 		assign_data_type(symbol, spec);
 		scan_dt_specs(symbol, args);
 	}
+	free (symbol);
 }

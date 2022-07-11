@@ -11,7 +11,7 @@ int is_non_printable(char str);
 
 char *store_format(char *spec, const char *str, int *index);
 
-int is_symbol(char *str);
+int is_symbol(const char *str);
 
 void format_func(char *spec, va_list args);
 
@@ -23,7 +23,7 @@ int _isalpha(int c);
 
 int _putchar(char c);
 
-int _strcmp(char *s1, char *s2);
+int _strcmp(const char *s1, char *s2);
 
 void scan_dt_specs(char *symbol, va_list args);
 
@@ -47,16 +47,5 @@ typedef struct
 	char *symbol;
 	void (*print_data)(char *spec, va_list arg);
 } specifier;
-
-/**
- * specifier data_type_specs[] - array of data type specifiers
- */
-specifier data_type_specs[] =
-{
-	{"NULL", print_NULL},
-	{"c", print_char},
-	{"s", print_string}
-
-};
 
 #endif
