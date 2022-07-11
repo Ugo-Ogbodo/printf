@@ -1,30 +1,24 @@
 #include "main.h"
 
 /**
- * is_symbol - function that checks if input char is a specifier,
+ * is_symbol - function that checks if input char is a symbol
  * e.g 'c', 'd', etc
- * @str: string to check
+ * @c: char to check
  *
- * Return: index where specifier is found in the data_type_specs[] array,
- * otherwise, 0 if no specifier is found
+ * Return: 1 if symbol is found otherwise, 0
  */
-int is_symbol(const char *str)
+int is_symbol(const char c)
 {
 	int i;
+	char *symbols;
 
-	specifier data_type_specs[] =
+	symbols = "cs";
+
+	for (i = 0; i < 2; i++)
 	{
-		{"NULL", print_NULL},
-		{"c", print_char},
-		{"s", print_string}
-	};
-
-
-	for (i = 1; i < 3; i++)
-	{
-		if (_strcmp(str, data_type_specs[i].symbol) == 0)
-			return (i);
+		if (c == symbols[i])
+			return (1);
 	}
-
+	
 	return (0);
 }

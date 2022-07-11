@@ -15,7 +15,8 @@
 void format_func(char *spec, va_list args)
 {
 	char *symbol;
-	symbol = malloc(sizeof(char) * _strlen(spec));
+
+	symbol = malloc(sizeof(char) * _strlen(spec) + 1);
 	if (symbol == NULL)
 		return;
 
@@ -24,5 +25,5 @@ void format_func(char *spec, va_list args)
 		assign_data_type(symbol, spec);
 		scan_dt_specs(symbol, args);
 	}
-	free (symbol);
+	free(symbol);
 }

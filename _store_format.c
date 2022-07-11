@@ -8,19 +8,19 @@
  *
  * Return: Given format as one char
  */
-char *store_format(char *spec, const char *str, int *index)
+void store_format(char *spec, const char *str, int index)
 {
 	int i, j;
-       
-	i = *index;
 
-	for (j = 0; !(is_symbol(&(str[i]))); i++, j++)
+	i = index;
+
+	for (j = 0; !(is_symbol(str[i])); i++, j++)
+	{
 		spec[j] = str[i];
+	}
+
 
 	spec[j] = str[i];
 	spec[++j] = '\0';
 
-	*index = ++i;
-
-	return (spec);
 }

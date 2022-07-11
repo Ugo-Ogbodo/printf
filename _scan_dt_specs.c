@@ -12,15 +12,14 @@ void scan_dt_specs(char *symbol, va_list args)
 {
 	int index;
 
-	specifier data_type_specs[] =
-	{
+	specifier data_type_specs[] = {
 		{"NULL", print_NULL},
 		{"c", print_char},
-		{"s", print_string}
+		{"s", print_string},
+		{"n", backslash}
 	};
 
-	index = is_symbol(symbol);
-
-	if (index < 3)
+	index = is_dt(symbol);
+	if (index < 3 && index != 0)
 		data_type_specs[index].print_data(symbol, args);
 }

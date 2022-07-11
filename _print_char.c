@@ -13,7 +13,4 @@ void print_char(char *spec, va_list arg)
 	(void) spec;
 	letter = va_arg(arg, int);
 	_putchar(letter);
-/**
-	_print(%letter);
-*/
 }

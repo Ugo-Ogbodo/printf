@@ -9,9 +9,11 @@ int _printf(const char *format, ...);
 
 int is_non_printable(char str);
 
-char *store_format(char *spec, const char *str, int *index);
+void store_format(char *spec, const char *str, int index);
 
-int is_symbol(const char *str);
+int is_symbol(const char c);
+
+int is_dt(const char *str);
 
 void format_func(char *spec, va_list args);
 
@@ -23,6 +25,8 @@ int _isalpha(int c);
 
 int _putchar(char c);
 
+void _puts(char *str);
+
 int _strcmp(const char *s1, char *s2);
 
 void scan_dt_specs(char *symbol, va_list args);
@@ -32,6 +36,8 @@ void print_char(char *spec, va_list arg);
 void print_NULL(char *spec, va_list arg);
 
 void print_string(char *spec, va_list arg);
+
+void backslash(char *spec, va_list args);
 
 unsigned int _puts_mod(const char *const str, int *index);
 

@@ -11,15 +11,8 @@
  */
 int is_non_printable(char str)
 {
-	int i;
-
-	char *non_print = "\\%";
-
-	for (i = 0; non_print[i] != '\0'; i++)
-	{
-		if (str == non_print[i])
-			return (1);
-	}
+	if (str == 92 || str == '%')
+		return (1);
 
 	return (0);
 }

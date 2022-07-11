@@ -13,7 +13,7 @@
  */
 void assign_data_type(char *data_type, char *spec)
 {
-	int i = 0, j = 0, len;
+	int i, j = 0, len;
 
 	len = _strlen(spec);
 	for (i = 0; i < len; i++)

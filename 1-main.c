@@ -2,6 +2,10 @@
 
 int main(void)
 {
-	_printf("Hello %s ", "World");
+	
+	char s = 'c';
+
+	 _printf("%c, b c d\n", s);
+	
 	return (0);
 }

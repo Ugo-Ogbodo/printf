@@ -8,27 +8,38 @@
  */
 int _printf(const char *format, ...)
 {
-	int i;
+	int ii;
 	char *spec;
 	va_list args;
 
-	spec = malloc(_strlen(format) * sizeof(int));
+	spec = malloc(_strlen(format) * sizeof(char) + 1);
 	if (spec == NULL)
 		return (0);
 
 	va_start(args, format);
-	for (i = 0; format[i] != '\0'; i++)
+	for (ii = 0; format[ii] && format[ii] != '\0'; ii++)
 	{
-		if (is_non_printable(format[i]))
+		if (is_non_printable(format[ii]))
 		{
-			store_format(spec, format, &i);
-			format_func(spec, args);
+			if (format[ii] == 92)
+			{
+				store_format(spec, format, ii);
+				backslash(spec, args);
+				ii += (_strlen(spec) - 1);
+			}
+			else
+			{
+				store_format(spec, format, ii);
+				format_func(spec, args);
+				ii += (_strlen(spec) - 1);
+			}
 		}
-
-		_putchar(format[i]);
+		else
+			_putchar(format[ii]);
 	}
+
 	va_end(args);
 	free(spec);
 
-	return (i);
+	return (ii);
 }
