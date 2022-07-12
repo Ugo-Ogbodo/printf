@@ -6,7 +6,7 @@
  * @params: the parameters struct.
  * @ap: the argument pointer.
  *
- * Return: new pointer.
+ * Return: string to new pointer.
  */
 char *get_precision(char *p, params_t *params, va_list ap)
 {
