@@ -85,7 +85,7 @@ int print_string(va_list ap, params_t *params)
 
 /**
  * print_percent - prints string.
- * @ap: argumen, pointer.
+ * @ap: argumn pointer.
  * @params: the parameters struct.
  *
  * Return: number chars printed.
