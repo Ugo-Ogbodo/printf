@@ -22,11 +22,11 @@ int print_from_to(char *start, char *stop, char *except)
 }
 
 /**
- * print_rev - prints string in reverse.
+ * print_rev - prints strings in reverse.
  * @ap: string.
  * @params: the parameters struct.
  *
- * Return: number bytes printed.
+ * Return: number bytes printed as sum.
  */
 int print_rev(va_list ap, params_t *params)
 {
@@ -47,7 +47,7 @@ int print_rev(va_list ap, params_t *params)
 
 /**
  * print_rot13 - prints string in rot13.
- * @ap: string.
+ * @ap: strings.
  * @params: the parameters struct.
  *
  * Return: number bytes printed.
