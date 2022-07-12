@@ -1,3 +1,3 @@
 PRINTF
 
-This is a collaborative project
+This is a collaborative project, aimed to reproduce the printf function
